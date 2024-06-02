@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "RedHatDisplay";
+  src: url(../fonts/RedHatDisplay-Variable.ttf);
+}
+:root {
+  --Dark-blue: hsl(223, 47%, 23%);
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--Pale-blue);
+  margin: 0;
+  padding: 0;
+  font-family: "RedHatDisplay";
+  font-size: 16px;
+  overflow: hidden;
+  min-height: 100vh;
+  background-image: url(../imgs/pattern-background-desktop.svg);
+  background-position: top -5vw left 0vw;
+  background-repeat: no-repeat;
+}
+@media (max-width: 375px) {
+  body {
+    background-image: url(../imgs/pattern-background-mobile.svg);
+  }
+}
+main.summary {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.summary .card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  width: 400px;
+}
+@media (max-width: 375px) {
+  main.summary .card {
+    margin: 1rem;
+  }
+}
+main.summary .card .main-image {
+  width: 100%;
+}
+main.summary .card .main-image img {
+  width: 100%;
+  display: block;
+}
+main.summary .card .content {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (max-width: 375px) {
+  main.summary .card .content {
+    gap: 1.5rem;
+  }
+}
+main.summary .card .content h2.tittle {
+  color: var(--Dark-blue);
+  font-weight: 900;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+main.summary .card .content p.des {
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--Desaturated-blue);
+}
+main.summary .card .content .plan {
+  background-color: var(--Very-pale-blue);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  border-radius: 0.7rem;
+}
+main.summary .card .content .plan .icon {
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+main.summary .card .content .plan .icon img {
+  width: 100%;
+  display: block;
+}
+main.summary .card .content .plan .plan-des {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  gap: 0.2rem;
+  flex: 1;
+  text-align: left;
+}
+main.summary .card .content .plan .plan-des h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--Dark-blue);
+}
+main.summary .card .content .plan .plan-des p {
+  color: var(--Desaturated-blue);
+}
+main.summary .card .content .plan .change a {
+  color: var(--Bright-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+main.summary .card .content .plan .change:hover a {
+  color: hsl(245, 75%, 60%);
+}
+main.summary .card .content .button {
+  background-color: var(--Bright-blue);
+  padding: 0.7rem;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  box-shadow: 0px 10px 20px 0 var(--Pale-blue);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+main.summary .card .content .button:hover {
+  background-color: hsl(245, 75%, 60%);
+}
+main.summary .card .content .cancel {
+  font-weight: 700;
+  color: var(--Desaturated-blue);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  width: fit-content;
+  align-self: center;
+}
+main.summary .card .content .cancel:hover {
+  color: var(--Dark-blue);
+}
